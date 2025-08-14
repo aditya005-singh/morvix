@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morvix | Networking Consulting</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* --- Base --- */
+* {margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif}
+body{background:#0e2a47;color:#fff;line-height:1.6}
+
+/* --- HEADER --- */
+header{
+  position:relative;
+  height:180px;
+  background:#fff;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+header .big-logo{height:100px;width:auto;z-index:2}
+
+/* Left tilted image */
+header img:first-of-type {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 2;
+}
+
+/* Hamburger */
+.menu-toggle{
+  position:absolute;
+  top:25px;
+  right:25px;
+  width:28px;
+  height:20px;
+  cursor:pointer;
+  z-index:3;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+.menu-toggle span{
+  height:3px;
+  width:100%;
+  background:#0e2a47;
+  margin:2px 0;
+}
+
+/* nav dropdown */
+.nav-menu{
+  display:none;
+  flex-direction:column;
+  position:absolute;
+  top:25px;
+  right:60px;
+  background:#ffffff;
+  border-radius:6px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+  z-index:4;
+  min-width:90px;
+}
+.nav-menu a{
+  color:#0e2a47;
+  text-decoration:none;
+  padding:10px 16px;
+  font-size:14px;
+  border-bottom:1px solid #eee;
+}
+.nav-menu a:last-child{
+  border-bottom:none;
+}
+.nav-menu a:hover{
+  background:#f2f2f2;
+}
+
+/* --- HERO & SECTIONS --- */
+.hero{
+  text-align:center;
+  padding:60px 20px;
+  background:#082138
+}
+.hero h1{font-size:3rem;margin-bottom:10px}
+.container{overflow: hidden;}  
+video{
+  
+  object-fit: cover;
+}
+
+section.section{padding:60px 20px}
+section.section:nth-of-type(even){background:#102e50}
+section.section img{display:block;width:100%;max-width:600px;border-radius:10px;margin:0 auto 20px}
+section.section h2{text-align:center;margin-bottom:12px}
+section.section p{text-align:center;max-width:800px;margin:0 auto}
+
+/* form */
+form{max-width:600px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+input,textarea,button{padding:12px;border-radius:6px;font-size:1rem;border:1px solid #ccc}
+button{background:#082138;color:#fff;border:none;cursor:pointer}
+
+/* footer */
+footer {
+      background-color: #021522;
+      color: #ccc;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1200px;
+      margin-bottom: 20px;
+    }
+    .footer-columns h4 {
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .footer-columns ul {
+      list-style: none;
+    }
+    .footer-columns ul li a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .footer-columns ul li a:hover {
+      color: #fff;
+    }
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #888;
+    }
+    .social-icons {
+      margin-top: 15px;
+    }
+    .social-icons a {
+      color: #ccc;
+      margin: 0 8px;
+      font-size: 1.2rem;
+    }
+    .social-icons a:hover {
+      color: #fff;
+}
+@media (max-width: 720px) {
+  .container video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+  }
+}
+</style>
+<script>
+function toggleMenu(){
+  const menu=document.querySelector('.nav-menu');
+  menu.style.display=menu.style.display==='flex'?'none':'flex';
+}
+</script>
+</head>
+<body>
+<header style="background: white;
+height: 150px;position: relative;
+overflow: hidden;">
+  <img src="conner.jpeg" alt="Morvix Strip">
+  <img src="logocut.jpeg" alt="Morvix Logo" class="big-logo">
+
+  <!-- Hamburger Menu -->
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Navigation -->
+  <div class="nav-menu">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#join">Join</a>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Welcome To Morvix</h1>
+  <div class="container">
+    <video autoplay loop muted controls class="back-video">
+  <source src="intro.mp4" type="video/mp4">
+</video>
+  <p>Empowering businesses through smart networking solutionsMission:To empower individuals with zero-investment job opportunities 
+    and provide companies with reliable remote workforce solutions.Vision:To become India’s #1 trusted name for home-based jobs 
+    and networking consultancy, making digital income a reality for everyone.
+  </p>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container">
+    <img src="colleb.jpg" alt="Networking">
+    <h2>About Morvix</h2>
+    <p>Morvix is a leading networking consulting company helping major brands amplify their digital reach through strategic partnerships and network solutions.
+      
+      Morvix is a modern networking consultancy dedicated to creating real work-from-home opportunities for people across India—especially youth, students, and those seeking zero-investment online jobs. Founded in 2024 in India by Aditya Singhaniya, Morvix has rapidly evolved from a startup into a trusted digital platform that empowers individuals with flexible earning potential, while helping businesses expand their outreach through smart networking solutions.
+
+Our mission is not just about providing jobs; it’s about building a digital ecosystem where talented individuals can collaborate, learn, earn, and grow. At Morvix, we believe in democratizing work—giving access to remote employment to those who may lack resources but have the drive and skills to succeed.
+
+We specialize in remote team setup, brand partnerships, and lead generation strategies tailored for digital-first companies. 
+    </p>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="container">
+    <img src="serv.jpg" alt="Collaboration">
+    <h2>Our Services</h2>
+    <p>We assist businesses in growing their reach and reputation through innovative network consulting and collaboration strategies.
+      💼 Services:
+Zero Investment Work-from-Home Jobs
+
+Remote Team Setup for Businesses
+
+Networking & Lead Generation
+
+Work Training & Mentorship
+
+Digital Outreach & Brand Support
+    </p>
+  </div>
+</section>
+
+<section id="join" class="section">
+  <div class="container">
+    <img src="https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?auto=format&fit=crop&w=800&q=80" alt="Remote Work">
+    <h2>Why Join Morvix</h2>
+    <p>Morvix provides zero‑investment, work‑from‑home opportunities to graduates and unemployed youth — empowering them for a brighter digital future.
+       💸 Earn from home with no investment required
+
+🧑‍💻 Professional training even if you have no prior experience
+
+💼 Daily and weekly tasks designed for students & job seekers
+
+🤝 Supportive network and team to help you grow
+
+🏠 Work anytime, from anywhere
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form action="submit.php" method="POST">
+    <input type="text" name="FullName" placeholder="FullName" required>
+    <input type="email" name="Email" placeholder="Email" required>
+    <input type="text" name="PhoneNumber" placeholder="PhoneNumber" required>
+    <textarea name="Message" placeholder="Your Interest / Message" required></textarea>
+    <button type="submit">Submit</button>
+</form>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-columns">
+      <div>
+        <h4>Tools</h4>
+        <ul>
+          <li><a href="#">Create</a></li>
+          <li><a href="#">Publish</a></li>
+          <li><a href="#">Engage</a></li>
+          <li><a href="#">Analyze</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Features</h4>
+        <ul>
+          <li><a href="#">AI Assistant</a></li>
+          <li><a href="#">Start Page</a></li>
+          <li><a href="#">Integrations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">digital Tools</a></li>
+          <li><a href="#">Marketing Tools</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-whatsaap"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Morvix. All rights reserved. | <a href="#" style="color: #888;">Privacy</a> | <a href="#" style="color: #888;">Terms</a></p>
+    </div>
+  </footer>
+</body>
+</html>
+
+>
